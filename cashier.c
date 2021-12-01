@@ -5,9 +5,7 @@
 int main (void)
 
 {
-    /*
-    int Fiftynotes = get_int("how many 50 notes in the till?: ");
-    */    
+      
     float cog = get_float("Amount owed: £");
     float paid = get_float("Amount paid: £");
     float change = (paid-cog);
@@ -18,6 +16,18 @@ int main (void)
         printf("Change: £%.2f", change);
     printf("\n");
     }
+
+    //£50 Notes
+
+    while(fifty <= change)
+    for (fifty; fifty<=change; change = change - fifty)
+    {
+        fif++;
+    }
+    {
+        printf("Give %i Fifty pound notes", fif);
+    }
+printf("\n");
 
 
     //£20 Notes
