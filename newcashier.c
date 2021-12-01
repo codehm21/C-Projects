@@ -6,12 +6,13 @@ int main (void)
 
 {
     // Multiplied change by 100, rounded up, convert to pence display in pounds
+    // to solve bug with roundings - 0.05 not being recognised
       
     float cog = get_float("Amount owed: £");
     float paid = get_float("Amount paid: £");
     float change = roundf((paid-cog)*100);
     const int five = 500, ten = 1000, twenty = 2000, fifty = 5000;
-    const int twopound = 200, onepound = 100, fiftyp = 50, twentyp = 20, tenp = 10, fivep = 5, onepence = 1; 
+    const int twopound = 200, onepound = 100, fiftyp = 50, twentyp = 20, tenp = 10, fivep = 5, twopence = 2, onepence = 1; 
     int ff = 0, tt = 0, t = 0, f = 0, twp = 0, op = 0, ffp = 0, ttp = 0, tp = 0, fp = 0, twop = 0, onep = 0; 
 
     
@@ -150,6 +151,18 @@ int main (void)
         printf("Give %i Five Pence", fp);
         printf("\n");
     }
+
+    while(twopence <= change)
+    for (twopence; twopence<=change; change = change - twopence)
+    {
+        twop++;
+    }
+    if (twop!=0)
+    {
+        printf("Give %i Two Pence", twop);
+        printf("\n");
+    }
+
 
     while(onepence <= change)
     for (onepence; onepence<=change; change = change - onepence)
