@@ -11,7 +11,7 @@ int main (void)
     float paid = get_float("Amount paid: £");
     float change = roundf((paid-cog)*100);
     const int five = 500, ten = 1000, twenty = 2000, fifty = 5000;
-    const int twopound = 200, onepound = 100; float fiftyp = 50, twentyp = 20, tenp = 10, fivep = 5, onepence = 1; 
+    const int twopound = 200, onepound = 100, fiftyp = 50, twentyp = 20, tenp = 10, fivep = 5, onepence = 1; 
     int ff = 0, tt = 0, t = 0, f = 0, twp = 0, op = 0, ffp = 0, ttp = 0, tp = 0, fp = 0, twop = 0, onep = 0; 
 
     
