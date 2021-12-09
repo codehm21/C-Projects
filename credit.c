@@ -43,7 +43,7 @@ do
 
 // If awnser of multiplication is greater than 10, add the two products together
 
-          if (p > 10)
+          if (p > 9)
             {
               s = p %= 10;
               c = 1;
@@ -83,7 +83,7 @@ do
         printf("American Express \n");
         return 0;
         }    
-        else if ((ccnum > 50 && ccnum < 56) && (lengh == 16 && lohnsum == 0))
+        else if (ccnum > 50 && ccnum < 56 && lengh == 16 && lohnsum == 0)
         {
         printf("Mastercard \n");
         return 0;
