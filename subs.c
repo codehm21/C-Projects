@@ -31,27 +31,26 @@ int main(int argc, string argv[])
 
     string sub = argv[1];
     string plaintext = get_string("plaintext: ");
+    printf("Ciphertext: ");
 
-       for (int i = 0, len = strlen(sub); i < len; i++)
-   
-        for (int k = 0, lengh = strlen(plaintext); k < lengh; k++)
+    for (int k = 0, lengh = strlen(plaintext); k < lengh; k++)
+ 
     {   
         char d = plaintext[k];
-        char c = sub[i]; 
-        if(isalpha(c))
+        if(isalpha(d))
         {
-        char m = 'A';
-        if (islower (c))
-        m = 'a';    
-        position[i]= d - m;
-        p = position[i];
-        key[i] = c - m;
+            char m = 'A';
+            if (islower (d))
+            m = 'a';    
+            p = d - m;
+            printf("%c", sub[p]);
         }
-          
-        printf("%c,", sub[p]);
-                       
-    }
-    printf("\n");              
+    else
+        printf("%c", d);
+    }   
+        
+    
+    printf("\n");               
         
 
 }
@@ -71,10 +70,11 @@ for (int i = 0, len = strlen(s); i < len; i++)
 bool check_duplicates(string (s))
 {
     for (int i = 0, len = strlen(s); i < len; i++)
+  
 
     {
-        for (int j = i + 1, len = strlen(s); j < len; j++)     
-        if (s[i] == s[j])
+        for (int j = i + 1, len = strlen(s); j < len; j++)   
+        if (tolower(s[i]) == tolower(s[j]))
         dup++;
     }
         {
